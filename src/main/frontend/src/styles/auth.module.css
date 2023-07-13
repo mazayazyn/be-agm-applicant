@@ -1,0 +1,64 @@
+*{
+    text-decoration: none;
+}
+
+.box{
+    padding: 3% 2%;
+    border: 1px solid #E2E2E2;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    text-align: center;
+    margin-right: 15%!important;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 5%!important;
+    margin-bottom: 5%!important;
+}
+
+.textField{
+    width: 90%;
+}
+
+.submit{
+    background-color: #141414!important;
+    width: 90%;
+}
+
+.background{
+    background-image: url("../assets/auth/BackgroundLogin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-end;
+}
+
+p span{
+    color: #454ADE;
+}
+
+@media screen and (max-width: 900px) {
+    .box{
+        width: 100%;
+        padding: 3% 2%;
+        border: 1px solid #E2E2E2;
+        box-sizing: border-box;
+        border-radius: 4px;
+        display: flex;
+        text-align: center;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+        align-items: center;
+        margin: 0% 5%!important;
+    }
+
+    .background{
+        background-image: none;
+        background-color: #233C67;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+    }
+}

@@ -1,0 +1,51 @@
+.headers{
+    background-image: url('../assets/header/Headers.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+}
+
+.hero{
+    background-image: url('../assets/landing/Hero.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    height: 800px;
+}
+
+.navImg{
+    width:20%;
+    display: block;
+}
+
+.vacancies{
+    background-image: url('../assets/landing/vacancies.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+
+.navImgMobile{
+    display: none;
+}
+
+.logoimg{
+    width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+    .navImgMobile{
+        width:60%;
+        display: flex;
+    }
+
+    .navImg{
+        display: none;
+    }
+
+    .logoimg{
+        width: 100%;
+    }
+  }

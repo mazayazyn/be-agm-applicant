@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org/" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .text-item{
+            color: #454ADE;
+        }
+
+        .wrap-all{
+            display: flex;
+            justify-content: center!important;
+        }
+
+        .img-100{
+            width: 100%!important;
+        }
+
+        .div-btn{
+            width: 200px;
+        }
+
+        .button-apply{
+            padding: 8%;
+            border-radius: 2px;
+            width: 100%;
+            color: #FFFFFF;
+            background-color: #141414!important;
+            cursor: pointer!important;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .button-apply:hover{
+            background-color: #353535!important;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap-all">
+    <div class="container mx-auto space-y-12" style="width: 100%; display: flex; justify-content: center; margin: auto">
+        <div>
+            <div class="img-100" style="width: 100%">
+                <img src="https://i.ibb.co/YPZ8WST/Headers.png" style="width: 100%">
+            </div>
+            <br>
+            <div class="message space-y-8">
+                <h1 style="font-weight: 700; font-size: 1.875rem; line-height: 2.25rem; text-align: center; color: #141414;" th:text="'Hello, ' + ${user.username} + '!'"></h1>
+                <p style="text-align: center">If you receive this message, you have been recommended to apply for a job on an existing vacancy. <br> You can apply directly by clicking the button below or accessing the url.</p>
+                <br>
+                <div style="border: solid 1px #E2E2E2; width: 75%; margin: auto; padding: 2%;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <table style="width: 100%">
+                            <tr>
+                                <td style="width: 70%">
+                                    <h1 style="color:#454ADE; font-size: 1.5rem; line-height: 1rem; font-weight: bold;" th:text="${vacancy.title}"></h1>
+                                    <p style="font-weight: bold; font-size: 1.125rem; line-height: 0.75rem;" th:text="${vacancy.companyName}"></p>
+                                </td>
+                                <td style="width: 20%">
+                                    <p style="font-weight: bold; font-size: 16px; margin: 0;">Date Closed</p>
+                                    <p style="margin: 0; font-size: 16px;" th:text="${vacancy.closingDate}"></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <br><br>
+                <div style="display: flex; margin: auto;" class="div-btn">
+                    <a href="https://agm-applicant.herokuapp.com/" target="_blank" style="width: 100%;"><button th:href="'https://agm-applicant.herokuapp.com/job-detail/' + ${user.id} + '/' + ${vacancy.id}" type="button" class="button-apply">Apply Job Now</button></a>
+                </div>
+                <br>
+                <p style="text-align: center">or</p>
+                <br>
+                <div style="text-align: center; color: #454ADE;">
+                    <a th:href="'https://agm-applicant.herokuapp.com/job-detail/' + ${user.id} + '/' + ${vacancy.id}" target="_blank" style="color: #454ADE; text-decoration: underline; font-size: 16px; font-weight: bold;">Apply via link here !</a>
+                </div>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
